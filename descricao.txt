@@ -1,0 +1,99 @@
+Descrição Exaustiva do Projeto "Acessor"
+O Acessor é um aplicativo de gestão de tarefas desenvolvido para plataformas Android e iOS. Seu objetivo principal é ajudar os usuários a organizarem suas atividades diárias, planejar tarefas relacionadas a essas atividades e receber lembretes que facilitam o cumprimento de prazos e compromissos importantes. Ele utiliza Firebase como backend para autenticação, armazenamento de dados e envio de notificações, garantindo que os dados dos usuários sejam sincronizados e seguros.
+
+1. Objetivo do Aplicativo
+O Acessor visa:
+
+Proporcionar uma interface amigável e moderna para gerenciar tarefas e atividades.
+Ajudar os usuários a se manterem produtivos através de lembretes automáticos.
+Oferecer sincronização de dados em tempo real para permitir o uso em múltiplos dispositivos.
+2. Funcionalidades Principais
+2.1 Gerenciamento de Atividades e Tarefas
+O usuário pode criar atividades, cada uma com um nome e um horário.
+Cada atividade pode conter tarefas relacionadas, que detalham o que precisa ser feito.
+As atividades são armazenadas no banco de dados Firebase Firestore.
+2.2 Lembretes
+Lembrete de 15 minutos antes da atividade: Uma notificação push é enviada para lembrar o usuário.
+Lembrete diário às 20h: O aplicativo notifica o usuário para planejar as atividades do dia seguinte.
+2.3 Autenticação
+Login e registro de usuários utilizando Firebase Authentication (Email/Senha).
+Persistência da sessão do usuário utilizando AsyncStorage.
+2.4 Sincronização em Tempo Real
+As atividades e tarefas são armazenadas no Firebase Firestore, permitindo que os dados sejam sincronizados automaticamente entre dispositivos.
+2.5 Interface Intuitiva e Design Moderno
+Tela inicial de boas-vindas com um CTA claro.
+Tela de login e registro com formulários simples e acessíveis.
+Painel principal com uma visão clara das atividades e tarefas do dia.
+Design responsivo e sofisticado, com uma paleta de cores definida:
+Primária: #38D7E7 (Azul claro).
+Secundária: #EE316B (Rosa).
+Fundo: #FFFFFF (Branco).
+Textos suaves: #F9F7F1 (Bege claro).
+3. Estrutura do Aplicativo
+Telas do Aplicativo
+Tela de Boas-Vindas (Welcome Screen):
+Exibe uma mensagem de introdução e oferece opções para login ou registro.
+Tela de Login:
+Permite que usuários registrados façam login com email e senha.
+Tela de Registro:
+Permite que novos usuários criem uma conta.
+Dashboard:
+Lista todas as atividades do dia com opções para adicionar, editar ou excluir atividades.
+Tela de Adicionar Atividade:
+Formulário para criar uma nova atividade e adicionar tarefas relacionadas.
+Tela de Configurações:
+Permite configurar lembretes e notificações.
+4. Arquitetura do Projeto
+Frontend
+Framework: React Native com Expo.
+Navegação: React Navigation para gerenciar as transições entre telas.
+Estado Global: Context API para gerenciar os dados do usuário e atividades.
+Notificações: expo-notifications para notificações push e lembretes.
+Design: Componentes estilizados usando estilos customizados no React Native.
+Backend
+Plataforma: Firebase.
+Firebase Authentication: Gerenciamento de login e registro.
+Firebase Firestore: Armazenamento de atividades e tarefas em tempo real.
+Firebase Cloud Messaging: Envio de notificações push.
+5. Fluxo de Uso do Aplicativo
+Primeiro Acesso:
+O usuário é recebido na tela de boas-vindas e pode optar por fazer login ou registrar-se.
+Cadastro e Login:
+O usuário insere suas informações e é redirecionado ao painel principal.
+Painel de Atividades:
+O usuário pode visualizar as atividades do dia atual.
+Pode adicionar uma nova atividade, definir um horário e tarefas associadas.
+Recebendo Lembretes:
+O aplicativo envia notificações 15 minutos antes de uma atividade começar.
+Às 20h, o app lembra o usuário de planejar o próximo dia.
+Gerenciamento Contínuo:
+O usuário pode editar ou excluir atividades, bem como acessar o histórico das mesmas.
+6. Tecnologias e Ferramentas Utilizadas
+Frontend
+React Native (Expo): Para desenvolver um aplicativo nativo responsivo.
+AsyncStorage: Para persistência local de dados.
+React Navigation: Para gerenciar as transições entre telas.
+Expo-Notifications: Para envio e agendamento de notificações push.
+Backend
+Firebase Authentication: Para autenticação segura de usuários.
+Firebase Firestore: Para armazenamento em tempo real das atividades e tarefas.
+Firebase Cloud Messaging: Para envio de notificações.
+7. Diferenciais do Aplicativo
+Lembretes Inteligentes:
+Notificações automáticas ajudam a manter o usuário produtivo e organizado.
+Sincronização em Tempo Real:
+As mudanças feitas no aplicativo refletem imediatamente em todos os dispositivos do usuário.
+Design Sofisticado:
+Uma interface moderna e minimalista melhora a experiência do usuário.
+Configuração Simples:
+Fácil de usar, mesmo para usuários que não têm experiência com aplicativos de gestão.
+8. Público-Alvo
+Profissionais que precisam organizar tarefas e compromissos.
+Estudantes que desejam gerenciar suas rotinas de estudo.
+Qualquer pessoa que busca melhorar sua produtividade e organização pessoal.
+9. Escalabilidade
+O Acessor foi projetado para ser escalável:
+
+Suporte Multidispositivo: Sincronização em tempo real via Firebase.
+Modularidade: Código bem estruturado para facilitar a adição de novas funcionalidades.
+Infraestrutura na Nuvem: Firebase garante escalabilidade sem grandes mudanças arquiteturais.

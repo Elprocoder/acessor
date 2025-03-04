@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "acessor",
+    "name": "Acessor",
     "slug": "acessor",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,17 +12,38 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.acessor.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.acessor.app",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "platforms": ["android", "ios"],
+    "extra": {
+      "eas": {
+        "projectId": "6817713a-fc47-4393-b772-6bdaed96cc6a"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "owner": "mualule",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/6817713a-fc47-4393-b772-6bdaed96cc6a"
+    },
+    "entryPoint": "./App.js"
   }
 }

@@ -1,0 +1,233 @@
+# Prompt para Desenvolvimento de Aplicativo de Gerenciamento de Projetos
+
+## Visão Geral
+Desenvolver um aplicativo móvel completo de gerenciamento de projetos usando React Native com Expo. O aplicativo deve atender tanto usuários individuais quanto equipes, oferecendo uma interface intuitiva para planejar, executar e monitorar projetos de diferentes categorias.
+
+## Stack Tecnológica
+
+### Frontend
+- **Framework**: React Native com Expo
+- **Gerenciamento de Estado**: Redux Toolkit ou Context API
+- **UI/UX**: React Native Paper ou Native Base
+- **Navegação**: React Navigation v6
+- **Formulários**: Formik com Yup
+- **Gráficos**: Victory Native ou React Native SVG
+- **Animações**: React Native Reanimated
+
+### Backend
+- **Framework**: Node.js (Express ou NestJS)
+- **Banco de Dados**: PostgreSQL com Prisma ORM
+- **Cache**: Redis
+- **Autenticação**: JWT, OAuth 2.0
+- **Comunicação**: RESTful API e Socket.io para recursos em tempo real
+
+### DevOps/Infraestrutura
+- **CI/CD**: GitHub Actions
+- **Hospedagem**: AWS (ECS/ECR) ou Google Cloud
+- **Notificações**: Firebase Cloud Messaging (FCM)
+
+## Funcionalidades Detalhadas
+
+### 1. Sistema de Autenticação e Usuários
+- Cadastro com e-mail/senha, validação por e-mail
+- Login social (Google, Apple, Facebook)
+- Autenticação biométrica (Face ID, Touch ID)
+- Recuperação de senha segura
+- Perfis de usuário com foto, bio e preferências
+- Gerenciamento de sessões multi-dispositivo
+
+### 2. Gestão de Projetos
+- Dashboard principal com visão geral dos projetos ativos
+- Criação de projetos a partir de modelos pré-definidos por categoria:
+  - Desenvolvimento de Software
+  - Marketing Digital
+  - Construção Civil
+  - Eventos
+  - Educação
+  - Pesquisa
+- Criação de projetos personalizados com estrutura flexível
+- Campos obrigatórios: título, descrição, objetivo, data de início/fim
+- Campos opcionais: orçamento, stakeholders, recursos
+- Sistema de tags e categorias personalizáveis
+- Status global do projeto (Não iniciado, Em andamento, Pausado, Concluído, Cancelado)
+
+### 3. Estrutura Hierárquica
+- Hierarquia de 3 níveis: Projeto > Fases > Tarefas
+- Cada nível permite:
+  - Descrição detalhada
+  - Atribuição de responsáveis
+  - Definição de prazos
+  - Estimativa de tempo
+  - Dependências (predecessoras/sucessoras)
+  - Anexos e documentos
+- Subtarefas ilimitadas com checklists
+- Sistema de dependências para definir ordem de execução
+- Caminho crítico automático
+
+### 4. Dashboard e Visualizações
+- Gráfico de Gantt interativo e responsivo
+- Visualização em Kanban para tarefas
+- Gráfico burndown para sprints
+- Calendário integrado com filtros
+- Timeline visual de marcos do projeto
+- Visualização em lista para tarefas diárias
+- Modos de visualização personalizáveis
+
+### 5. Sistema de Notificações
+- Push notifications em tempo real
+- Notificações por e-mail (diárias/semanais)
+- Lembretes configuráveis (1 dia antes, 3 dias antes, etc.)
+- Centro de notificações no app
+- Integração bidirecional com calendários externos
+
+### 6. Colaboração em Equipe
+- Convites por e-mail ou link
+- Níveis de permissão granulares:
+  - Administrador (controle total)
+  - Gerente (edição de estrutura)
+  - Membro (execução de tarefas)
+  - Observador (apenas visualização)
+- Chat em tempo real por projeto e por tarefa
+- Comentários com menções (@usuário)
+- Feed de atividades detalhado
+- Sistema de aprovações para entregas
+
+### 7. Recursos Avançados
+- Modo offline com sincronização automática
+- Templates dinâmicos que evoluem com machine learning
+- Sugestões inteligentes de próximos passos
+- Campos personalizáveis para projetos/tarefas
+- Detecção de conflitos de agenda
+- Estimativa inteligente de prazos baseada em histórico
+
+### 8. Integrações
+- API aberta para integração com ferramentas externas
+- Conectores prontos para:
+  - Trello, Asana, Jira
+  - Google Workspace, Microsoft 365
+  - Slack, Discord
+  - GitHub, GitLab
+  - Zapier para automações
+
+### 9. Relatórios e Análises
+- Dashboard de métricas personalizáveis
+- Exportação em múltiplos formatos (PDF, Excel, CSV)
+- Relatórios programados automáticos
+- Análise de desempenho por membro/equipe
+- Detecção de gargalos e atrasos
+- Previsões de conclusão baseadas em tendências
+
+### 10. Recursos Específicos para Mobile
+- Widgets para iOS e Android
+- Digitalização de documentos com OCR
+- Captura de áudio para notas e tarefas
+- Comandos de voz para criar e atualizar tarefas
+- Notificações baseadas em localização
+- Modo de economia de bateria
+
+### 11. Gamificação e Engajamento
+- Sistema de pontos por tarefas concluídas
+- Conquistas desbloqueáveis
+- Rankings e competições entre equipes
+- Streaks de produtividade
+- Celebrações de marcos concluídos
+
+### 12. UI/UX
+- Design system consistente
+- Tema claro/escuro (automático com horário)
+- Animações sutis e significativas
+- Navegação intuitiva e contextual
+- Recursos de acessibilidade completos
+- Tutoriais interativos para novos usuários
+
+## Requisitos Técnicos
+
+### Performance
+- Tempo de carregamento inicial < 2 segundos
+- Tempo de resposta para ações < 0.5 segundos
+- Sincronização em background
+- Otimização de imagens e assets
+- Lazy loading de componentes
+
+### Segurança
+- Criptografia de dados sensíveis
+- HTTPS para todas as comunicações
+- Proteção contra CSRF, XSS e SQL Injection
+- Auditoria de acessos e modificações
+- Backups automatizados
+
+### Escalabilidade
+- Arquitetura de microserviços
+- Balanceamento de carga
+- Sharding de banco de dados
+- Caching em múltiplas camadas
+- Rate limiting para proteção da API
+
+## Fluxos de Usuário Principais
+
+### Fluxo de Onboarding
+1. Tela de boas-vindas com benefits
+2. Opções de cadastro/login
+3. Verificação de e-mail (se necessário)
+4. Tour guiado dos recursos principais
+5. Criação do primeiro projeto (assistente passo a passo)
+6. Sugestão para convidar membros da equipe
+
+### Fluxo de Criação de Projeto
+1. Seleção de categoria ou template
+2. Preenchimento de informações básicas
+3. Definição de fases principais (sugeridas pelo template)
+4. Customização de campos específicos
+5. Convite para membros da equipe
+6. Definição de marcos e prazos
+
+### Fluxo Diário de Trabalho
+1. Login (biométrico preferencial)
+2. Dashboard com tarefas do dia
+3. Notificações não lidas
+4. Atualizações de status com swipe
+5. Adição rápida de notas/subtarefas
+6. Relatório de progresso ao final do dia
+
+## Monetização (Opcional)
+- Modelo freemium com limites de projetos/usuários
+- Assinatura mensal/anual para recursos avançados
+- Planos por equipe com preços por usuário
+- Recursos enterprise para grandes organizações
+
+## Entregáveis Esperados
+
+### Fase 1: MVP (8 semanas)
+- Autenticação básica (e-mail/senha)
+- Criação e gestão de projetos simples
+- Estrutura básica de tarefas
+- Dashboard principal
+- Notificações push essenciais
+
+### Fase 2: Colaboração (4 semanas)
+- Login social e biometria
+- Sistema de permissões
+- Chat em tempo real
+- Histórico de atividades
+- Melhorias de UI/UX
+
+### Fase 3: Recursos Avançados (6 semanas)
+- Templates inteligentes
+- Relatórios e análises
+- Integrações principais
+- Funcionalidades offline
+- Widgets e recursos específicos para mobile
+
+### Fase 4: Refinamento (4 semanas)
+- Otimização de performance
+- Testes A/B de interfaces
+- Gamificação
+- Recursos de acessibilidade
+- Preparação para lançamento
+
+## Considerações Finais
+- O aplicativo deve priorizar simplicidade e facilidade de uso, mesmo com recursos avançados
+- Design e performance são prioridades absolutas
+- A experiência deve ser consistente entre iOS e Android
+- Feedback dos usuários deve ser incorporado continuamente
+- Documentação clara para desenvolvedores futuros
